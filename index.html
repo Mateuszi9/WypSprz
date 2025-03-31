@@ -53,17 +53,7 @@
             background-color: #fff;
             color: black;
         }
-        .search-box button {
-            position: absolute;
-            right: 5px;
-            top: 5px;
-            background: black;
-            border: none;
-            padding: 15px;
-            font-size: 22px;
-            cursor: pointer;
-            color: white;
-        }
+        
         .machines {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -181,7 +171,7 @@
         <p class="contact">📍 Lokalizacja: Twoje miasto</p>
         <div class="search-box">
             <input type="text" id="search" onkeyup="searchMachines()" placeholder="Wyszukaj sprzęt...">
-            <button onclick="searchMachines()"></button>
+          
         </div>
         
         <div class="machines">
