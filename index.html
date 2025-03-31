@@ -12,23 +12,30 @@
             color: white;
         }
         .container { 
-            max-width: 800px; 
+            max-width: 900px; 
             margin: auto; 
             background: rgba(0, 0, 0, 0.7); 
             padding: 20px; 
             border-radius: 10px;
         }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        .machines {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
         .machine { 
             border: 1px solid #ccc; 
             padding: 15px; 
-            margin: 10px; 
             background: white; 
             color: black; 
             border-radius: 5px;
         }
         .machine img {
             max-width: 100%;
-            height: auto;
+            height: 200px;
             border-radius: 5px;
         }
         .contact { 
@@ -37,28 +44,55 @@
             color: #ffcc00;
         }
     </style>
+    <script>
+        function searchMachines() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let machines = document.getElementsByClassName("machine");
+            
+            for (let i = 0; i < machines.length; i++) {
+                let title = machines[i].getElementsByTagName("h2")[0].innerText.toLowerCase();
+                if (title.includes(input)) {
+                    machines[i].style.display = "block";
+                } else {
+                    machines[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Wypożyczalnia Sprzętu Budowlanego</h1>
         <p>Profesjonalny sprzęt do wynajęcia w najlepszych cenach!</p>
         
-        <div class="machine">
-            <h2>Młot Wyburzeniowy</h2>
-            <img src="https://via.placeholder.com/300" alt="Młot Wyburzeniowy">
-            <p>Wynajem: 100 zł/dzień</p>
+        <div class="search-box">
+            <input type="text" id="search" onkeyup="searchMachines()" placeholder="Wyszukaj sprzęt...">
         </div>
         
-        <div class="machine">
-            <h2>Osuszacz Powietrza</h2>
-            <img src="https://via.placeholder.com/300" alt="Osuszacz Powietrza">
-            <p>Wynajem: 120 zł/dzień</p>
-        </div>
-        
-        <div class="machine">
-            <h2>Zagęszczarka Gruntu</h2>
-            <img src="https://via.placeholder.com/300" alt="Zagęszczarka Gruntu">
-            <p>Wynajem: 150 zł/dzień</p>
+        <div class="machines">
+            <div class="machine">
+                <h2>Młot Wyburzeniowy</h2>
+                <img src="https://example.com/mlot.jpg" alt="Młot Wyburzeniowy">
+                <p>Wynajem: 100 zł/dzień</p>
+            </div>
+            
+            <div class="machine">
+                <h2>Osuszacz Powietrza</h2>
+                <img src="https://example.com/osuszacz.jpg" alt="Osuszacz Powietrza">
+                <p>Wynajem: 120 zł/dzień</p>
+            </div>
+            
+            <div class="machine">
+                <h2>Zagęszczarka Gruntu</h2>
+                <img src="https://example.com/zageszczarka.jpg" alt="Zagęszczarka Gruntu">
+                <p>Wynajem: 150 zł/dzień</p>
+            </div>
+            
+            <div class="machine">
+                <h2>Agregat Prądotwórczy</h2>
+                <img src="https://example.com/agregat.jpg" alt="Agregat Prądotwórczy">
+                <p>Wynajem: 180 zł/dzień</p>
+            </div>
         </div>
         
         <p class="contact">📞 Zadzwoń: 123-456-789</p>
