@@ -18,45 +18,13 @@
             padding: 20px; 
             border-radius: 10px;
         }
-        header { 
-            margin-bottom: 20px;
-        }
-        h1, h2 { 
-            font-size: 40px;
-            color: #ffcc00;
-        }
-        h3 {
-            font-size: 20px;
-            color: #ffcc00;
-        }
         .search-box {
             margin-bottom: 20px;
-            position: relative;
-            max-width: 400px;
-            margin: auto;
-        }
-        .search-box input {
-            width: 100%;
-            padding: 10px;
-            font-size: 18px;
-            border-radius: 5px;
-            border: 2px solid #ffcc00;
-        }
-        .search-box button {
-            position: absolute;
-            right: 5px;
-            top: 5px;
-            background: #ffcc00;
-            border: none;
-            padding: 10px;
-            font-size: 18px;
-            cursor: pointer;
         }
         .machines {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
-            margin-top: 20px;
         }
         .machine { 
             border: 1px solid #ccc; 
@@ -64,40 +32,16 @@
             background: white; 
             color: black; 
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .machine img {
             max-width: 100%;
             height: 200px;
             border-radius: 5px;
-            border: 2px solid #ccc;
-            margin-bottom: 15px;
-        }
-        .price {
-            font-weight: bold;
-            font-size: 18px;
-            color: #ff6600;
         }
         .contact { 
             font-size: 20px; 
             font-weight: bold; 
             color: #ffcc00;
-        }
-        footer { 
-            margin-top: 30px; 
-            font-size: 16px;
-            color: #ffcc00;
-        }
-        .machine p {
-            font-size: 16px;
-            color: black;
-        }
-        .machine .price {
-            font-size: 20px;
-            color: #ff6600;
-        }
-        .contact p {
-            font-size: 20px;
         }
     </style>
     <script>
@@ -117,69 +61,66 @@
     </script>
 </head>
 <body>
-    <header>
-        <h3>Mobile Rent</h3>
-        <h1>Wypożyczalnia Maszyn</h1>
-    </header>
     <div class="container">
-        <p class="contact">📞 Zadzwoń: 123-456-789</p>
-        <p class="contact">📍 Lokalizacja: Twoje miasto</p>
+        <h1>Wypożyczalnia Sprzętu Budowlanego</h1>
+        <p>Profesjonalny sprzęt do wynajęcia w najlepszych cenach!</p>
+        
         <div class="search-box">
             <input type="text" id="search" onkeyup="searchMachines()" placeholder="Wyszukaj sprzęt...">
-            <button onclick="searchMachines()">🔍</button>
         </div>
         
         <div class="machines">
             <div class="machine">
                 <h2>Młot Wyburzeniowy</h2>
                 <img src="https://github.com/Mateuszi9/WypSprz/blob/main/mlot.jpg?raw=true" alt="Młot Wyburzeniowy">
-                <p class="price">Wynajem: 100 zł/dzień (15 zł/godz)</p>
+                <p>Wynajem: 100 zł/dzień</p>
             </div>
             
             <div class="machine">
                 <h2>Osuszacz Powietrza</h2>
                 <img src="https://github.com/Mateuszi9/WypSprz/blob/main/mlot.jpg?raw=true" alt="Osuszacz Powietrza">
-                <p class="price">Wynajem: 120 zł/dzień (18 zł/godz)</p>
+                <p>Wynajem: 120 zł/dzień</p>
             </div>
             
             <div class="machine">
                 <h2>Zagęszczarka Gruntu</h2>
                 <img src="https://github.com/Mateuszi9/WypSprz/blob/main/mlot.jpg?raw=true" alt="Zagęszczarka Gruntu">
-                <p class="price">Wynajem: 150 zł/dzień (22 zł/godz)</p>
+                <p>Wynajem: 150 zł/dzień</p>
             </div>
             
             <div class="machine">
                 <h2>Agregat Prądotwórczy</h2>
                 <img src="https://github.com/Mateuszi9/WypSprz/blob/main/mlot.jpg?raw=true" alt="Agregat Prądotwórczy">
-                <p class="price">Wynajem: 180 zł/dzień (25 zł/godz)</p>
+                <p>Wynajem: 180 zł/dzień</p>
             </div>
+
             <div class="machine">
                 <h2>Młot Wyburzeniowy</h2>
                 <img src="https://github.com/Mateuszi9/WypSprz/blob/main/mlot.jpg?raw=true" alt="Młot Wyburzeniowy">
-                <p class="price">Wynajem: 100 zł/dzień (15 zł/godz)</p>
+                <p>Wynajem: 100 zł/dzień</p>
             </div>
             
             <div class="machine">
                 <h2>Osuszacz Powietrza</h2>
                 <img src="https://github.com/Mateuszi9/WypSprz/blob/main/mlot.jpg?raw=true" alt="Osuszacz Powietrza">
-                <p class="price">Wynajem: 120 zł/dzień (18 zł/godz)</p>
+                <p>Wynajem: 120 zł/dzień</p>
             </div>
             
             <div class="machine">
                 <h2>Zagęszczarka Gruntu</h2>
                 <img src="https://github.com/Mateuszi9/WypSprz/blob/main/mlot.jpg?raw=true" alt="Zagęszczarka Gruntu">
-                <p class="price">Wynajem: 150 zł/dzień (22 zł/godz)</p>
+                <p>Wynajem: 150 zł/dzień</p>
             </div>
             
             <div class="machine">
                 <h2>Agregat Prądotwórczy</h2>
                 <img src="https://github.com/Mateuszi9/WypSprz/blob/main/mlot.jpg?raw=true" alt="Agregat Prądotwórczy">
-                <p class="price">Wynajem: 180 zł/dzień (25 zł/godz)</p>
+                <p>Wynajem: 180 zł/dzień</p>
             </div>
         </div>
+        
+        <p class="contact">📞 Zadzwoń: 123-456-789</p>
+        <p>📍 Lokalizacja: Twoje miasto</p>
     </div>
-    <footer>
-        <p>© 2025 Mobile Rent - Wypożyczalnia Maszyn</p>
-    </footer>
 </body>
 </html>
